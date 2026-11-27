@@ -3,12 +3,15 @@
   "version": "0.2.1",
   "description": "Send guest vouchers, launch new offers, and see what your guests actually redeem, right from chat.",
   "author": {
-    "name": "Concierge Drawer",
+    "name": "Concierge Drawer Group, LLC",
     "email": "support@conciergedrawer.com",
     "url": "https://conciergedrawer.com"
   },
   "homepage": "https://conciergedrawer.com/agents",
   "privacyPolicyUrl": "https://conciergedrawer.com/legal/privacy",
+  "termsOfServiceUrl": "https://conciergedrawer.com/legal/terms",
+  "supportUrl": "https://conciergedrawer.com/contact",
+  "documentationUrl": "https://conciergedrawer.com/help/connecting-an-ai-agent",
   "repository": "https://github.com/concierge-drawer/concierge-drawer-plugins",
   "license": "MIT",
   "keywords": [
