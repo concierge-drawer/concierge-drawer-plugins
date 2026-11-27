@@ -8,6 +8,7 @@
     "url": "https://conciergedrawer.com"
   },
   "homepage": "https://conciergedrawer.com/agents",
+  "icon": "./assets/icon.png",
   "privacyPolicyUrl": "https://conciergedrawer.com/legal/privacy",
   "termsOfServiceUrl": "https://conciergedrawer.com/legal/terms",
   "supportUrl": "https://conciergedrawer.com/contact",
