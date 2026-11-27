@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "concierge-drawer",
-  "version": "0.2.0",
-  "description": "Run your hotel or restaurant vouchers: your agent checks how offers perform, creates and publishes voucher templates, sends vouchers to guests once you confirm, and invites your staff.",
+  "version": "0.2.1",
+  "description": "Send guest vouchers, launch new offers, and see what your guests actually redeem, right from chat.",
   "author": {
     "name": "Concierge Drawer",
     "email": "support@conciergedrawer.com",

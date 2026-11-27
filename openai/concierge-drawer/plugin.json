@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "concierge-drawer",
-  "version": "0.2.0",
-  "description": "Run your hotel or restaurant vouchers from ChatGPT: offers, guest sends, results and staff.",
+  "version": "0.2.1",
+  "description": "Send guest vouchers, launch new offers, and see what your guests actually redeem, right from ChatGPT.",
   "author": {
     "name": "Concierge Drawer",
     "email": "support@conciergedrawer.com",
@@ -22,8 +22,8 @@
       "onboardingSkill": "./skills/get-started/SKILL.md",
       "interface": {
         "displayName": "Concierge Drawer",
-        "shortDescription": "Run hotel and restaurant vouchers",
-        "longDescription": "Concierge Drawer replaces paper vouchers for hotels and restaurants. Businesses create voucher templates (a complimentary dessert, a welcome drink, a spa discount), their concierges and front desk staff send them to guests by email or text, and staff redeem them at the table or the counter.\n\nConnect Concierge Drawer and ask ChatGPT how your offers are doing this week, which concierges send the most, or which vouchers guests actually redeem. Draft a new offer together and publish it when you're happy with it. Send a guest a voucher once you confirm who it goes to. Invite new staff and organize them into teams.\n\nChatGPT works with your own permissions, only in the organizations and businesses you choose when you connect. Organization members and business admins can connect.",
+        "shortDescription": "Guest vouchers, offers and results",
+        "longDescription": "Connect Concierge Drawer so ChatGPT works from the same offers, guests, and team your concierges use every day. See how your vouchers are performing, launch new offers, treat a guest, and keep your staff organized without leaving the chat.\n\n• See what's working: Ask how this week's vouchers did, which offers guests actually redeem, and which concierges send the most.\n• Launch offers in minutes: Draft a welcome drink, a spa credit, or dessert on the house together, then publish it when it's ready.\n• Treat a guest on the spot: Send a voucher by email or text the moment it's earned. ChatGPT checks the details with you first.\n• Keep your team in step: Invite new staff, set roles, and organize people into teams across every property.",
         "developerName": "Concierge Drawer",
         "category": "Business",
         "capabilities": [

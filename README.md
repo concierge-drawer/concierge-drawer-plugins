@@ -2,7 +2,7 @@
 
 # Concierge Drawer plugins
 
-Run your hotel or restaurant vouchers from Claude Code, Codex or GitHub Copilot. The plugin adds Concierge Drawer's MCP server and a `run-vouchers` skill: your agent checks how your offers perform, drafts and publishes voucher templates, sends vouchers to guests once you confirm who they go to, and invites and organizes your staff. It works with your own permissions, only in the organizations and businesses you choose when you connect. Organization members and business admins can connect.
+Send guest vouchers, launch new offers, and see what your guests actually redeem, right from Claude Code, Codex or GitHub Copilot. The plugin adds Concierge Drawer's connector and a `run-vouchers` skill that knows how hotels and restaurants run their vouchers: your agent finds the right business, reads your results, and walks you through offers, sends and staff the way your team already works.
 
 ## Install
 
