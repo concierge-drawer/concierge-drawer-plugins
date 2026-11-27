@@ -1,4 +1,4 @@
-<img src="assets/icon.svg" alt="Concierge Drawer" width="96" height="96">
+<img src="assets/icon.png" alt="Concierge Drawer" width="96" height="96">
 
 # Concierge Drawer plugins
 
