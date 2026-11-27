@@ -1,0 +1,15 @@
+{
+  "name": "concierge-drawer",
+  "description": "Run your hotel or restaurant vouchers from your coding agent with Concierge Drawer.",
+  "owner": {
+    "name": "Concierge Drawer",
+    "email": "support@conciergedrawer.com"
+  },
+  "plugins": [
+    {
+      "name": "concierge-drawer",
+      "source": "./plugins/concierge-drawer",
+      "description": "Run your hotel or restaurant vouchers: your agent checks how offers perform, creates and publishes voucher templates, sends vouchers to guests once you confirm, and invites your staff."
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "concierge-drawer",
+  "version": "0.2.0",
+  "description": "Run your hotel or restaurant vouchers from ChatGPT: offers, guest sends, results and staff.",
+  "author": {
+    "name": "Concierge Drawer",
+    "email": "support@conciergedrawer.com",
+    "url": "https://conciergedrawer.com"
+  },
+  "homepage": "https://conciergedrawer.com/agents",
+  "repository": "https://github.com/concierge-drawer/concierge-drawer-plugins",
+  "license": "MIT",
+  "keywords": [
+    "hospitality",
+    "vouchers",
+    "hotels",
+    "restaurants"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "interface": {
+        "displayName": "Concierge Drawer",
+        "shortDescription": "Run hotel and restaurant vouchers",
+        "longDescription": "Concierge Drawer replaces paper vouchers for hotels and restaurants. Businesses create voucher templates (a complimentary dessert, a welcome drink, a spa discount), their concierges and front desk staff send them to guests by email or text, and staff redeem them at the table or the counter.\n\nConnect Concierge Drawer and ask ChatGPT how your offers are doing this week, which concierges send the most, or which vouchers guests actually redeem. Draft a new offer together and publish it when you're happy with it. Send a guest a voucher once you confirm who it goes to. Invite new staff and organize them into teams.\n\nChatGPT works with your own permissions, only in the organizations and businesses you choose when you connect. Organization members and business admins can connect.",
+        "developerName": "Concierge Drawer",
+        "category": "Business",
+        "capabilities": [
+          "See how your vouchers perform",
+          "Create and publish voucher templates",
+          "Send vouchers to guests by email or text",
+          "Track sent and redeemed vouchers",
+          "Invite staff and change roles",
+          "Organize staff into teams"
+        ],
+        "websiteURL": "https://conciergedrawer.com/agents",
+        "supportURL": "https://conciergedrawer.com/help",
+        "privacyPolicyURL": "https://conciergedrawer.com/legal/privacy",
+        "termsOfServiceURL": "https://conciergedrawer.com/legal/terms",
+        "defaultPrompt": [
+          "How did our vouchers do this week?",
+          "Draft a complimentary dessert voucher for the restaurant.",
+          "Send the welcome drink voucher to a guest."
+        ],
+        "brandColor": "#B8935A",
+        "logo": "./assets/icon.png",
+        "composerIcon": "./assets/icon.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Summarize a business's voucher results for the last week.",
+              "prompt": "How did our vouchers do over the last 7 days?",
+              "tools_triggered": "list_businesses, get_business_dashboard",
+              "expected_behavior": "ChatGPT calls list_businesses, asks which business if there are several, then calls get_business_dashboard with range 7d. It reports vouchers sent and redeemed, the redemption rate and its trend, the top senders and the top vouchers. Nothing changes."
+            },
+            {
+              "description": "Draft a voucher template and save it as a draft after the person confirms the wording.",
+              "prompt": "Create a complimentary dessert voucher for the restaurant, valid for 30 days.",
+              "tools_triggered": "list_businesses, create_voucher_template",
+              "expected_behavior": "ChatGPT drafts a title, description, redemption instructions and terms, shows them and asks the person to confirm. After they confirm, it calls create_voucher_template once with expires_in_days 30 and status draft, and says the template is a draft that staff can't send until it's published."
+            },
+            {
+              "description": "Send a voucher to a guest by email after confirming the details.",
+              "prompt": "Send the welcome drink voucher to guest@example.com.",
+              "tools_triggered": "list_voucher_templates, send_voucher",
+              "expected_behavior": "ChatGPT finds the active welcome drink template with list_voucher_templates, shows the offer and the recipient guest@example.com, and waits for a clear yes. Then it calls send_voucher once with recipient_email and without recipient_phone, and reports that the voucher was sent."
+            },
+            {
+              "description": "Invite a new concierge to a business.",
+              "prompt": "Invite sam@example.com to the hotel as a concierge.",
+              "tools_triggered": "list_businesses, invite_business_member",
+              "expected_behavior": "ChatGPT confirms the email and that Sam joins as a member of that business, then calls invite_business_member once with role member and says the invitation email was sent."
+            },
+            {
+              "description": "List the vouchers a concierge sent recently.",
+              "prompt": "Which vouchers did Jordan send this month?",
+              "tools_triggered": "list_business_members, get_business_member",
+              "expected_behavior": "ChatGPT finds Jordan with list_business_members and calls get_business_member, then lists the vouchers Jordan sent with their status. Nothing changes."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Texting a guest without their consent. ChatGPT should ask whether the guest agreed to receive texts, offer to send by email instead, and not call send_voucher with sms_consent true on its own.",
+              "prompt": "Text the dessert voucher to +1 512 555 0123, don't bother asking them."
+            },
+            {
+              "description": "Deleting a business. The connector doesn't delete businesses, organizations or voucher templates; ChatGPT should say so and point the person to Concierge Drawer's settings.",
+              "prompt": "Delete our downtown restaurant from Concierge Drawer."
+            },
+            {
+              "description": "Billing changes. The connector has no billing tools; ChatGPT should say plan changes happen on the Billing page in Concierge Drawer and not attempt them.",
+              "prompt": "Upgrade us to the Plus plan."
+            }
+          ]
+        },
+        "commerce": false
+      },
+      "publication": {
+        "countries": [
+          "US"
+        ],
+        "release_notes": "First release: dashboards, voucher templates, sending vouchers to guests, and managing staff and teams."
+      }
+    }
+  }
+}

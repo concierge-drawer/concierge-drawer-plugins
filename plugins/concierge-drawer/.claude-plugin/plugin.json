@@ -1,0 +1,21 @@
+{
+  "name": "concierge-drawer",
+  "version": "0.2.0",
+  "description": "Run your hotel or restaurant vouchers: your agent checks how offers perform, creates and publishes voucher templates, sends vouchers to guests once you confirm, and invites your staff.",
+  "author": {
+    "name": "Concierge Drawer",
+    "email": "support@conciergedrawer.com",
+    "url": "https://conciergedrawer.com"
+  },
+  "homepage": "https://conciergedrawer.com/agents",
+  "privacyPolicyUrl": "https://conciergedrawer.com/legal/privacy",
+  "repository": "https://github.com/concierge-drawer/concierge-drawer-plugins",
+  "license": "MIT",
+  "keywords": [
+    "hospitality",
+    "vouchers",
+    "hotels",
+    "restaurants",
+    "mcp"
+  ]
+}

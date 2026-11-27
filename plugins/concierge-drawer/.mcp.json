@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "concierge-drawer": {
+      "type": "http",
+      "url": "https://mcp.conciergedrawer.com/mcp"
+    }
+  }
+}

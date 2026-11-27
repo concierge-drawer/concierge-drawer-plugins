@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.conciergedrawer/concierge-drawer",
+  "title": "Concierge Drawer",
+  "description": "Run hotel and restaurant vouchers from a chat: offers, guest sends, results and staff.",
+  "version": "0.2.0",
+  "websiteUrl": "https://conciergedrawer.com/agents",
+  "repository": {
+    "url": "https://github.com/concierge-drawer/concierge-drawer-plugins",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://conciergedrawer.com/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.conciergedrawer.com/mcp"
+    }
+  ]
+}

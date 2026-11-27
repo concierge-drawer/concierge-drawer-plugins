@@ -1,0 +1,20 @@
+{
+  "name": "concierge-drawer",
+  "interface": {
+    "displayName": "Concierge Drawer"
+  },
+  "plugins": [
+    {
+      "name": "concierge-drawer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/concierge-drawer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
