@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "concierge-drawer",
-  "version": "0.2.2",
-  "description": "Send guest vouchers, launch new offers, and see what your guests actually redeem, right from chat.",
+  "version": "0.2.4",
+  "description": "Send guest vouchers for your hotel or restaurant, launch new offers, and see what guests redeem, right from chat.",
   "author": {
     "name": "Concierge Drawer",
     "email": "support@conciergedrawer.com",

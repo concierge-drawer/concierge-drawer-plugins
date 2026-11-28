@@ -1,6 +1,6 @@
 {
   "name": "concierge-drawer",
-  "description": "Send guest vouchers, launch new offers, and see what your guests actually redeem, right from your agent.",
+  "description": "Send guest vouchers for your hotel or restaurant, launch new offers, and see what guests redeem, right from your agent.",
   "owner": {
     "name": "Concierge Drawer",
     "email": "support@conciergedrawer.com"
@@ -9,7 +9,7 @@
     {
       "name": "concierge-drawer",
       "source": "./plugins/concierge-drawer",
-      "description": "Send guest vouchers, launch new offers, and see what your guests actually redeem, right from chat."
+      "description": "Send guest vouchers for your hotel or restaurant, launch new offers, and see what guests redeem, right from chat."
     }
   ]
 }
